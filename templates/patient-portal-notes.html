@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Patient Notes</title>
+
+        <link rel="stylesheet" href="../../static/css/cui-standard.min.css">
+        
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="../../static/js/patient.js"></script>
+
+    </head>
+    <body class="cui">
+        <nav class="header" id="styleguideheader" role="navigation">
+            <div class="container-fluid">
+                <div class="header-panels">
+                    <div class="header-panel hidden-md-down">
+                        <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <h1 class="header__title">
+                            <span>Patient Notes: {{patient}}</span>
+                        </h1>
+                    </div>
+                    <div class="header-panel header-panel--center base-margin-left base-margin-right hidden-lg-up">
+                        <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content content--alt">
+            <div class="container-fluid">
+                <br>
+                <div>
+                    <label for="patient_notes">Enter Patient Notes:</label>
+                    <textarea id="patient_notes" name="patient_notes" rows="25" cols="150"></textarea>
+                </div>
+                <div>
+                    <p id='patient' name='patient' style="display: none;">{{patient}}</p>
+                </div>
+                <div>
+                    <button id="submit-button" class="btn btn--primary" onclick=addNotes()>Submit</button>
+                </div>
+                <div class="form-group base-margin-bottom" style="text-align: center; color: blue" id="success-text"></div>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Webex Instant Connect Portal</title>
+
+        <link rel="stylesheet" href="../static/css/cui-standard.min.css">
+        <script src="../static/js/admin.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    </head>
+    <body class="cui">
+        <nav class="header" id="styleguideheader" role="navigation">
+            <div class="container-fluid">
+                <div class="header-panels">
+                    <div class="header-panel hidden-md-down">
+                        <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <h1 class="header__title">
+                            <span>Provider Sign Up Form</span>
+                        </h1>
+                    </div>
+                    <div class="header-panel header-panel--center base-margin-left base-margin-right hidden-lg-up">
+                        <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                    </div>
+                    <div class="header-panel header-panel--right hidden-md-down">
+                        <a href="/admin/home" class="header-item" title="UI Kit Home"><span class="icon-home"></span></a>
+                        <a href="/admin/patients" class="header-item">Patients</a>
+                        <a href="/admin/providers" class="header-item">Providers</a>
+                        <a href="/admin/appointments" class="header-item">Appointments</a>
+                        <a onclick=logout() class="header-item btn btn--danger" style="color: white;">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </body>
+</html>
+<html>
+<head>
+	<title> Providers Sign Up Form</title>
+
+
+<link rel="stylesheet"
+href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity=
+"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="../static/css/style_providers.css">
+
+</head>
+<body>
+
+	<br>
+	<br>
+	<br>
+
+    <div class="panel panel--loose panel--raised base-margin-bottom">
+                  <h2 class="subtitle">Sign Up Form</h2>
+
+			<form action="/admin/sign_up_provider" method="post">
+
+			<input class="box" type="text" name="first_name" id="first_name"
+			placeholder="First Name" required /><br>
+
+			<input class="box" type="text" name="last_name" id="last_name"
+			placeholder="Last Name" required /><br>
+
+			<input class="box" type="text" name="webex_person_id" id="webex_person_id"
+			placeholder="Webex Person ID" required /><br>
+
+			<input class="box" type="email" name="email" id="email"
+			placeholder="Email " required /><br>
+
+            <input class="box" type="password" name="password" id="password" 
+            placeholder="Password" required/><br>
+
+			<input class="box" type="text" name="hours_of_operation" id="hours_of_operation"
+			placeholder="Hours of Operation (ex: 9-5, 10-4)" required/><br>
+
+			<input class="box" type="text" name="timezone" id="timezone"
+			placeholder="Timezone (ex: EST, PST, CST)" required/><br>
+						<br>
+      <div class="col-xl-3">
+      <div class="section">
+			<input type="submit" id="submitDetails" value="Submit"
+      <button class="btn btn--primary"></button>
+    </div>
+    </div>
+			</form>
+
+      <div class="col-xl-3">
+        <div class="section">
+        <form method="post" action="/admin/allProviders">
+          <button class="btn btn--secondary">To see all available providers, please click here.</button>
+        </form>
+      </div>
+    </div>
+
+
+</html>

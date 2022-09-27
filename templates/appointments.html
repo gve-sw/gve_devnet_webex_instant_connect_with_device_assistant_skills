@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Webex Instant Connect Portal</title>
+
+        <link rel="stylesheet" href="../static/css/cui-standard.min.css">
+        <script src="../static/js/admin.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="../static/js/appointments.js"></script>
+    </head>
+    <body class="cui">
+        <nav class="header" id="styleguideheader" role="navigation">
+            <div class="container-fluid">
+                <div class="header-panels">
+                    <div class="header-panel hidden-md-down">
+                        <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                        <h1 class="header__title">
+                            <span>Appointment View</span>
+                        </h1>
+                    </div>
+                    <div class="header-panel header-panel--center base-margin-left base-margin-right hidden-lg-up">
+                        <a class="header__logo" href="http://www.cisco.com" target="_blank">
+                            <span class="icon-cisco"></span>
+                        </a>
+                    </div>
+                    <div class="header-panel header-panel--right hidden-md-down">
+                        <a href="/admin/home" class="header-item" title="UI Kit Home"><span class="icon-home"></span></a>
+                        <a href="/admin/patients" class="header-item">Patients</a>
+                        <a href="/admin/providers" class="header-item">Providers</a>
+                        <a href="/admin/appointments" class="header-item">Appointments</a>
+                        <a onclick=logout() class="header-item btn btn--danger" style="color: white;">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="content content--alt">
+            <div class="container-fluid">
+                <div class="section">
+                    <div class="panel panel--loose panel--raised base-margin-bottom">
+                        <div class="responsive-table">
+                            <table class="table table--lined table--selectable" aria-label="Selectable rows table example">
+                                <thead>
+                                    <tr>
+                                        <th>IC Base Subject</th>
+                                        <th>Host URL</th>
+                                        <th>Host URL</th>
+                                        <th>Guest URL</th>
+                                        <th>Space URI</th>
+                                        <th>Provider</th>
+                                        <th>Start Time</th>
+                                        <!--<th>End Time</th>-->
+                                        <th>Patient ID</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-body">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Webex Instant Connect Portal</title>
+
+		<link rel="stylesheet" href="../static/css/cui-standard.min.css">
+
+		<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+</head>
+<body class="cui">
+		<nav class="header" id="styleguideheader" role="navigation">
+				<div class="container-fluid">
+						<div class="header-panels">
+								<div class="header-panel hidden-md-down">
+										<a class="header__logo" href="http://www.cisco.com" target="_blank">
+												<span class="icon-cisco"></span>
+										</a>
+										<h1 class="header__title">
+												<span>Successful Provider Sign Up</span>
+										</h1>
+								</div>
+								<div class="header-panel header-panel--center base-margin-left base-margin-right hidden-lg-up">
+										<a class="header__logo" href="http://www.cisco.com" target="_blank">
+												<span class="icon-cisco"></span>
+										</a>
+								</div>
+								<div class="header-panel header-panel--right hidden-md-down">
+									<a href="/admin/home" class="header-item" title="UI Kit Home"><span class="icon-home"></span></a>
+									<a href="/admin/patients" class="header-item">Patients</a>
+									<a href="/admin/providers" class="header-item">Providers</a>
+									<a href="/admin/appointments" class="header-item">Appointments</a>
+									<a href="/login" class="header-item btn btn--danger" style="color: white;">Logout</a>
+								</div>
+						</div>
+				</div>
+		</nav>
+</body>
+</html>
+<html>
+<head>
+<head>
+	<title> Signup Form</title>
+<link rel="stylesheet"
+href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity=
+"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+crossorigin="anonymous">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+	<body>
+	<br>
+	<br>
+	<br>
+	<div class="container" >
+		<div class="row">
+		<div class="col-md-3">
+		</div>
+
+		<div class="col-md-6 main">
+			{% if schedule == True %}
+				<h1> Meeting Scheduled Successfully!</h1>
+			{% else %}
+				<h1> Sign Up Successful!</h1>
+			{% endif %}
+
+		</div>
+
+
+		<div class="col-md-3">
+		</div>
+
+		</div>
+	</div>
+</body>
+
+<div class="col-xl-6">
+	<div class="section">
+	{% if schedule == True %}
+		<form method="get" action="/patients">
+			<button class="btn btn--secondary">To return to account home page, click here.</button>
+		</form>
+	{% else %}
+		<form method="post" action="/allProviders">
+			<button class="btn btn--secondary">To see all available providers, please click here.</button>
+		</form>
+	{% endif %}
+	<form method="post" action="/admin/allProviders">
+		<button class="btn btn--secondary">To see all available providers, please click here.</button>
+	</form>
+</div>
+</div>
+</html>

@@ -1,0 +1,4 @@
+close notes
+close patient notes
+I'm done with notes
+end notes
